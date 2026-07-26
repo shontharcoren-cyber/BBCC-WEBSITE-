@@ -1,1 +1,382 @@
+  .prog-card{
+    background:#fff;border:1px solid rgba(27,27,24,0.1);border-radius:4px;padding:28px;
+    transition:border-color .2s, transform .2s;
+  }
+  .prog-card:hover{border-color:var(--gold);transform:translateY(-3px);}
+  .prog-card .grade{font-family:'JetBrains Mono';font-size:12px;letter-spacing:0.1em;color:var(--forest);text-transform:uppercase;margin-bottom:10px;}
+  .prog-card h3{font-size:24px;margin-bottom:12px;}
+  .prog-card ul{list-style:none;padding:0;margin:0 0 20px;}
+  .prog-card li{font-size:14px;color:#4a4a43;padding:7px 0;border-bottom:1px solid rgba(27,27,24,0.08);}
+  .prog-card li:last-child{border-bottom:none;}
+  .tag{display:inline-block;font-size:11px;font-family:'JetBrains Mono';padding:4px 10px;border:1px solid var(--gold);color:#8a6b2c;border-radius:2px;}
 
+  /* PRICING */
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  .price-card{
+    background:var(--navy-2);border:1px solid var(--line);border-radius:6px;padding:38px;color:var(--cream);position:relative;overflow:hidden;
+  }
+  .price-card.featured{border-color:var(--gold);}
+  .price-card .ribbon{position:absolute;top:18px;right:-38px;background:var(--gold);color:var(--navy);font-size:11px;font-family:'JetBrains Mono';font-weight:600;padding:5px 40px;transform:rotate(45deg);letter-spacing:0.05em;}
+  .price-card .plan-name{font-family:'JetBrains Mono';font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-soft);}
+  .price-card h3{font-size:26px;margin:10px 0 4px;}
+  .price-card .amount{font-family:'JetBrains Mono';font-size:44px;font-weight:600;color:var(--gold-soft);margin:18px 0 4px;}
+  .price-card .amount span{font-size:15px;color:rgba(244,239,228,0.6);font-weight:400;}
+  .price-card .desc{font-size:14px;color:rgba(244,239,228,0.65);margin-bottom:24px;}
+  .price-card ul{list-style:none;padding:0;margin:0 0 26px;}
+  .price-card li{font-size:14px;padding:9px 0;border-top:1px dashed var(--line);color:rgba(244,239,228,0.85);display:flex;gap:10px;}
+  .price-card li::before{content:"✓";color:var(--gold);font-weight:700;}
+
+  /* FACULTY */
+  .fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .fac-card{text-align:left;}
+  .fac-photo{
+    aspect-ratio:3/3.4;border-radius:4px;background:linear-gradient(160deg,#1a2b47,#0F1B2D);
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+    font-family:'Fraunces';font-size:34px;color:var(--gold-soft);border:1px solid var(--line);
+  }
+  .fac-card .fname{font-family:'Fraunces';font-size:17px;font-weight:600;}
+  .fac-card .frole{font-family:'JetBrains Mono';font-size:11px;color:var(--forest);text-transform:uppercase;letter-spacing:0.06em;margin:4px 0;}
+  .fac-card .fexp{font-size:13px;color:#5b5b52;}
+
+  /* FORMS */
+  .form-shell{
+    background:#fff;border:1px solid rgba(27,27,24,0.1);border-radius:6px;padding:36px;
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field.full{grid-column:1/-1;}
+  label{font-size:12px;font-family:'JetBrains Mono';letter-spacing:0.05em;color:#6b6b62;text-transform:uppercase;}
+  input,select,textarea{
+    border:1px solid rgba(27,27,24,0.18);border-radius:3px;padding:11px 12px;font-family:'Inter';font-size:14px;background:#fdfcf9;color:var(--ink);
+  }
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold);}
+  textarea{resize:vertical;min-height:90px;}
+  .submit-row{display:flex;align-items:center;gap:16px;margin-top:6px;flex-wrap:wrap;}
+  .btn-dark{
+    background:var(--navy);color:var(--cream);padding:13px 26px;border-radius:3px;border:none;font-weight:600;font-size:14px;cursor:pointer;
+    transition:background .2s;
+  }
+  .btn-dark:hover{background:#1a2b47;}
+  .form-note{font-size:12.5px;color:#7a7a70;}
+  .ok-msg{display:none;font-size:13px;color:var(--forest);font-weight:600;}
+
+  /* TWO COL: payment + dashboard */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  .panel{background:#fff;border:1px solid rgba(27,27,24,0.1);border-radius:6px;padding:30px;}
+  .panel h3{font-size:19px;margin-bottom:6px;}
+  .panel .sub{font-size:13px;color:#7a7a70;margin-bottom:22px;}
+  .fee-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(27,27,24,0.08);font-size:14px;}
+  .fee-row.total{border-bottom:none;padding-top:16px;font-weight:700;}
+  .fee-row .amt{font-family:'JetBrains Mono';}
+  .paymethods{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap;}
+  .paymethods span{border:1px solid rgba(27,27,24,0.15);padding:8px 14px;border-radius:3px;font-size:12.5px;font-family:'JetBrains Mono';}
+  .dash-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(27,27,24,0.08);}
+  .dash-row:last-child{border-bottom:none;}
+  .pill{font-size:11px;font-family:'JetBrains Mono';padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.04em;}
+  .pill.green{background:var(--forest-soft);color:var(--forest);}
+  .pill.amber{background:#F5E6C8;color:#8a6b2c;}
+
+  /* REVIEWS */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px;}
+  .rev-card{background:#fff;border:1px solid rgba(27,27,24,0.1);border-radius:6px;padding:26px;}
+  .stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px;}
+  .rev-card p{font-size:14.5px;line-height:1.65;color:#3a3a34;margin-bottom:16px;}
+  .rev-who{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:#7a7a70;border-top:1px solid rgba(27,27,24,0.08);padding-top:14px;}
+  .rev-who .n{font-weight:700;color:var(--ink);}
+
+  /* COMPLAINT status */
+  .status-track{display:flex;gap:0;margin:26px 0;}
+  .status-step{flex:1;text-align:center;position:relative;padding-top:22px;}
+  .status-step::before{content:"";position:absolute;top:6px;left:0;right:0;height:2px;background:rgba(27,27,24,0.15);}
+  .status-step:first-child::before{left:50%;}
+  .status-step:last-child::before{right:50%;}
+  .status-step .dot{position:absolute;top:0;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid rgba(27,27,24,0.2);}
+  .status-step.active .dot{background:var(--forest);border-color:var(--forest);}
+  .status-step.active::before{background:var(--forest);}
+  .status-step .lab{font-size:11.5px;font-family:'JetBrains Mono';text-transform:uppercase;color:#7a7a70;}
+  .status-step.active .lab{color:var(--forest);font-weight:600;}
+
+  /* GALLERY */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px;}
+  .gal-item{border-radius:4px;background:linear-gradient(135deg,#1a2b47,#0F1B2D);display:flex;align-items:center;justify-content:center;color:var(--gold-soft);font-family:'JetBrains Mono';font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border:1px solid var(--line);}
+  .gal-item.tall{grid-row:span 2;}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .info-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);}
+  .info-row .k{font-family:'JetBrains Mono';font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold-soft);width:100px;flex-shrink:0;}
+  .info-row .v{font-size:14.5px;color:rgba(244,239,228,0.85);line-height:1.6;}
+  .map-box{background:var(--navy-2);border:1px solid var(--line);border-radius:6px;height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;color:rgba(244,239,228,0.4);font-family:'JetBrains Mono';font-size:12px;text-align:center;padding:20px;}
+
+  footer{background:#0B1420;color:rgba(244,239,228,0.55);padding:50px 0 26px;}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid var(--line);}
+  .foot-grid h4{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:16px;}
+  .foot-grid a{display:block;font-size:13.5px;padding:5px 0;color:rgba(244,239,228,0.6);transition:color .2s;}
+  .foot-grid a:hover{color:var(--gold-soft);}
+  .foot-bottom{display:flex;justify-content:space-between;padding-top:22px;font-size:12.5px;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:900px){
+    .hero-grid,.about-grid,.two-col,.contact-grid{grid-template-columns:1fr;}
+    .prog-grid{grid-template-columns:1fr;}
+    .price-grid{grid-template-columns:1fr;}
+    .fac-grid{grid-template-columns:repeat(2,1fr);}
+    .stat-line{grid-template-columns:1fr;}
+    .stat-line div{border-right:none;border-bottom:1px solid rgba(27,27,24,0.12);}
+    .gal-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .nav-links{display:none;}
+    .nav-toggle{display:block;}
+    .hero h1{font-size:38px;}
+    .form-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">
+      <div class="seal">BB</div>
+      <div class="brand-text">
+        <div class="name">BBCC</div>
+        <div class="sub">Est. 2001 · Bright Boarding</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#pricing">Fees</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#admission" class="nav-cta">Enroll Now</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Established 2001 · Grades 8–10</div>
+      <h1>Discipline builds <em>bright</em> futures.</h1>
+      <p class="lead">BBCC has guided high-school students through Class 8, 9 and 10 for over two decades — with a boarding campus for full-time focus, and home tutors for families who prefer learning at home.</p>
+      <div class="hero-ctas">
+        <a href="#admission" class="btn-primary">Start Admission</a>
+        <a href="#pricing" class="btn-ghost">View Fees</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="est">
+        <div class="seal">EST<br>2001</div>
+        <div class="txt">
+          <div>Since</div>
+          <div>2001</div>
+        </div>
+      </div>
+      <div class="hero-stat-row"><span class="label">Years running</span><span class="val">23+</span></div>
+      <div class="hero-stat-row"><span class="label">Grades covered</span><span class="val">8, 9, 10</span></div>
+      <div class="hero-stat-row"><span class="label">Boarding fee</span><span class="val">₹6,500/mo</span></div>
+      <div class="hero-stat-row"><span class="label">Home tutor fee</span><span class="val">₹7,000/mo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="about">
+  <div class="wrap about-grid">
+    <div class="copy">
+      <div class="eyebrow">About BBCC</div>
+      <h2 style="margin-top:14px;">Two decades of steady, focused teaching.</h2>
+      <p>Bright Boarding Coaching Centre was founded in 2001 with one purpose: help Class 8, 9 and 10 students build strong fundamentals through structured routine, close attention, and honest feedback to parents. We are not a competitive-exam factory — we focus entirely on high school subjects, done properly.</p>
+      <p>Our boarding wing gives students a distraction-free routine on campus. For families who'd rather keep their child at home, our home-tutor programme sends qualified teachers to the student's residence on a fixed weekly schedule.</p>
+      <div class="stat-line">
+        <div><div class="num">2001</div><div class="lab">Year founded</div></div>
+        <div><div class="num">8–10</div><div class="lab">Grades taught</div></div>
+        <div><div class="num">2</div><div class="lab">Learning modes</div></div>
+      </div>
+    </div>
+    <div class="plaque">
+      <div class="seal" style="border-color:var(--gold);">BB</div>
+      <h3>Our approach</h3>
+      <p>Small batches, regular parent updates, and a clear complaint-resolution process — because trust is built through follow-through, not promises. Every student's attendance, performance and fee status is visible to parents through their own dashboard login.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="programs">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Programs</div>
+      <h2>Built around three grades, not a syllabus for everyone.</h2>
+      <p>Each grade runs its own batch with subject-wise teachers, weekly tests, and progress notes sent to parents.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card">
+        <div class="grade">Class 8</div>
+        <h3>Foundation Batch</h3>
+        <ul>
+          <li>Mathematics & Science</li>
+          <li>English & Social Studies</li>
+          <li>Weekly class tests</li>
+          <li>Monday–Saturday, 4–7 PM</li>
+        </ul>
+        <span class="tag">Boarding + Home Tutor</span>
+      </div>
+      <div class="prog-card">
+        <div class="grade">Class 9</div>
+        <h3>Core Batch</h3>
+        <ul>
+          <li>Mathematics & Science</li>
+          <li>English & Social Studies</li>
+          <li>Fortnightly parent updates</li>
+          <li>Monday–Saturday, 4–7 PM</li>
+        </ul>
+        <span class="tag">Boarding + Home Tutor</span>
+      </div>
+      <div class="prog-card">
+        <div class="grade">Class 10</div>
+        <h3>Board Prep Batch</h3>
+        <ul>
+          <li>All board subjects</li>
+          <li>Model exams & revision drills</li>
+          <li>One-on-one doubt sessions</li>
+          <li>Monday–Saturday, 4–7:30 PM</li>
+        </ul>
+        <span class="tag">Boarding + Home Tutor</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Boarding & Home Tuition</div>
+      <h2>Two ways to learn at BBCC.</h2>
+      <p>Choose whichever suits your child's routine — both include the same syllabus, teachers and testing schedule.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="plan-name">On Campus</div>
+        <h3>Boarding</h3>
+        <div class="amount">₹6,500<span>/month</span></div>
+        <div class="desc">Student stays at the BBCC campus for a fully structured daily routine.</div>
+        <ul>
+          <li>Stay + study on campus</li>
+          <li>Supervised study hours</li>
+          <li>Meals included</li>
+          <li>Daily attendance tracking</li>
+          <li>Class 8, 9 & 10 subjects</li>
+        </ul>
+        <a href="#admission" class="btn-primary" style="width:100%;text-align:center;box-sizing:border-box;">Choose Boarding</a>
+      </div>
+      <div class="price-card featured">
+        <div class="ribbon">Popular</div>
+        <div class="plan-name">At Home</div>
+        <h3>Home Tutor</h3>
+        <div class="amount">₹7,000<span>/month</span></div>
+        <div class="desc">A qualified BBCC tutor visits your home on a fixed weekly schedule.</div>
+        <ul>
+          <li>Tutor visits your residence</li>
+          <li>Flexible weekday/weekend slots</li>
+          <li>Same syllabus & test schedule</li>
+          <li>Weekly progress notes</li>
+          <li>Class 8, 9 & 10 subjects</li>
+        </ul>
+        <a href="#admission" class="btn-primary" style="width:100%;text-align:center;box-sizing:border-box;">Book Home Tutor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="faculty" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Faculty</div>
+      <h2>Teachers who stay for years, not seasons.</h2>
+    </div>
+    <div class="fac-grid">
+      <div class="fac-card">
+        <div class="fac-photo">AL</div>
+        <div class="fname">Arnold Laishram</div>
+        <div class="frole">Mathematics & Physics</div>
+        <div class="fexp">Maths for Class 8, 9, 10 · Physics master</div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-photo">AL</div>
+        <div class="fname">Aganba Laishram</div>
+        <div class="frole">Mathematics & Science</div>
+        <div class="fexp">Maths master · also teaches Class 11, 12</div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-photo">AL</div>
+        <div class="fname">Arun Laishram</div>
+        <div class="frole">Computer Science</div>
+        <div class="fexp">Computer Science master</div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-photo">+</div>
+        <div class="fname">& other experts</div>
+        <div class="frole">Guest Faculty</div>
+        <div class="fexp">Subject specialists as needed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="admission">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Admission</div>
+      <h2>Enroll your child</h2>
+      <p>Fill this in and our office will call within one working day to confirm the batch and mode.</p>
+    </div>
+    <div class="form-shell">
+      <form onsubmit="event.preventDefault(); this.querySelector('.ok-msg').style.display='inline';">
+        <div class="form-row">
+          <div class="field"><label>Student name</label><input type="text" required></div>
+          <div class="field"><label>Parent name</label><input type="text" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Class</label><select required><option value="">Select</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+          <div class="field"><label>Learning mode</label><select required><option value="">Select</option><option>Boarding — ₹6,500/mo</option><option>Home Tutor — ₹7,000/mo</option></select></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Phone number</label><input type="tel" required></div>
+          <div class="field"><label>Home address (for home tutor)</label><input type="text"></div>
+        </div>
+        <div class="submit-row">
+          <button class="btn-dark" type="submit" style="background:var(--gold);color:var(--navy);">Submit Admission Enquiry</button>
+          <span class="form-note ok-msg">✅ Received — our office will call you shortly.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap two-col">
+    <div class="panel">
+      <h3>Fee Payment</h3>
+      <div class="sub">Pay this month's fee securely</div>
+      <div class="fee-row"><span>Tuition fee</span><span class="amt">₹6,500.00</span></div>
+      <div class="fee-row"><span>Late fee</span><span class="amt">₹0.00</span></div>
+      <div class="fee-row total"><span>Total due</span><span class="amt">₹6,500.00</span></div>
+      <div class="paymethods">
+        <span>UPI</span><span>Net Banking</span><span>Debit / Credit Card</span>
+      </div>
+      <button class="btn-dark" style="width:100%;" onclick="alert('This is a demo — connect a real payment gateway (Razorpay/UPI) to process live payments.')">Pay Now</button>
+      <div class="form-note" style="margin-top:12px;">Receipt is emailed and downloadable after payment.</div>
+    </div>
+    <div class="panel">
+      <h3>Parent Dashboard</h3>
+      <div class="sub">Track your child at a glance</div>
+      <div class="dash-row"><span>Attendance (this month)</span><span class="pill green">92%</span></div>
+      <div class="dash-row"><span>Latest test score</span><span class="pill green">Math — 88/100</span></div>
+      <div class="dash-row"><span>Fee status</span><span class="pill amber">Due 5th</span></div>
+      <div class="dash-row"><span>Next parent update</span><span class="mono" style="font-size:13px;color:#5b5b52;">Fri, 4:30 PM</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="reviews" style="padding-top:0;">
